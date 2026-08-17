@@ -1,146 +1,327 @@
-# Projeto Telecom X — Previsão de Churn (Parte 2)
+<div align="center">
 
-Neste desafio, atuei como **Assistente de Análise de Dados** na empresa Telecom X, dando continuidade ao projeto de **Evasão de Clientes (Churn)** iniciado na etapa anterior.  
-Enquanto a Parte 1 concentrou-se na limpeza e na análise exploratória dos dados, esta fase teve como foco principal a **construção de modelos preditivos** para estimar a probabilidade de cancelamento dos clientes.
+# 🤖 Telecom X — Previsão de Churn com Machine Learning
 
-O propósito foi transformar análises descritivas em soluções analíticas capazes de apoiar decisões estratégicas e ações de retenção baseadas em dados.
+### Modelagem Preditiva para Identificação de Clientes com Risco de Evasão
 
----
+Projeto desenvolvido durante minha formação em **Data Science no programa Oracle Next Education (ONE) + Alura**, dando continuidade à análise exploratória realizada no **Telecom X — Parte 1**.
 
-## Objetivo do Projeto
+Nesta etapa, o foco foi transformar os dados tratados em **modelos de Machine Learning capazes de identificar padrões relacionados ao cancelamento de clientes**.
 
-- Desenvolver modelos de Machine Learning para previsão de churn  
-- Comparar algoritmos de classificação  
-- Avaliar o desempenho dos modelos por meio de métricas estatísticas  
-- Identificar os fatores mais relevantes associados à evasão  
-- Propor ações estratégicas de retenção orientadas por dados  
+<br>
 
----
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge\&logo=pandas\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge\&logo=numpy\&logoColor=white)
+![Scikit Learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge\&logo=scikitlearn\&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Data%20Visualization-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0?style=for-the-badge)
 
-## O que foi realizado
-
-- Preparação dos dados para aplicação dos modelos preditivos  
-- Codificação e normalização de variáveis  
-- Análise de correlação entre atributos  
-- Separação dos dados em conjuntos de treino e teste (80/20)  
-- Treinamento de modelos de classificação  
-- Avaliação e comparação de desempenho  
-- Interpretação das variáveis mais influentes no churn  
+</div>
 
 ---
 
-## O que foi praticado
+## 📌 Sobre o projeto
 
-- Pré-processamento de dados  
-- Engenharia de atributos (Feature Engineering)  
-- Aplicação de algoritmos de Machine Learning  
-- Avaliação estatística de modelos  
-- Leitura e interpretação de métricas  
-- Análise de importância das variáveis  
-- Construção de recomendações baseadas em resultados  
+A **Telecom X** enfrenta um problema de evasão de clientes e busca utilizar seus dados para compreender e antecipar possíveis cancelamentos.
 
----
+Na **Parte 1**, o trabalho foi concentrado em **ETL, tratamento dos dados e Análise Exploratória (EDA)**.
 
-## Preparação dos Dados
+Nesta segunda etapa, os dados preparados foram utilizados para desenvolver e comparar **modelos de classificação**, buscando identificar clientes com maior probabilidade de Churn e os fatores que mais influenciam esse comportamento.
 
-### Tratamento e Transformação
-- Correção de valores inconsistentes  
-- Conversão de variáveis categóricas em numéricas  
-- Padronização e normalização conforme o modelo aplicado  
-- Estudo da relação entre as variáveis  
-
-### Divisão dos Conjuntos
-- Base separada em dados de treino (80%) e teste (20%)  
+> O projeto demonstra a evolução de uma análise descritiva para uma abordagem preditiva utilizando Machine Learning.
 
 ---
 
-## Modelagem Preditiva
+## 🎯 Objetivo
 
-Foram implementados e comparados os seguintes algoritmos:
+O projeto teve como principais objetivos:
 
-- Regressão Logística  
-- Random Forest  
-
-Cada modelo foi ajustado de acordo com suas particularidades, buscando maior capacidade de generalização e melhor desempenho preditivo.
-
----
-
-## Avaliação dos Modelos
-
-Para análise dos resultados, foram utilizadas as métricas:
-
-- Acurácia  
-- Precisão  
-- Recall  
-- F1-score  
-- Matriz de confusão  
-
-### Principais resultados:
-- O modelo **Random Forest** apresentou desempenho superior, identificando padrões mais complexos nos dados.  
-- A **Regressão Logística** possibilitou maior transparência na interpretação das variáveis e seus impactos sobre o churn.  
+* 🤖 Desenvolver modelos de Machine Learning para previsão de Churn
+* 🔍 Identificar padrões associados à evasão de clientes
+* ⚙️ Preparar os dados para modelagem preditiva
+* 📊 Comparar algoritmos de classificação
+* 📈 Avaliar o desempenho dos modelos
+* 🧠 Identificar as variáveis mais relevantes para o Churn
+* 💡 Gerar recomendações para estratégias de retenção
 
 ---
 
-## Principais Variáveis Relacionadas ao Churn
+## 🔄 Pipeline de Machine Learning
 
-As variáveis com maior influência na evasão foram:
+O projeto seguiu um fluxo completo de preparação, treinamento e avaliação:
 
-- Tempo de permanência do cliente (customer_tenure)  
-- Valor total gasto (account_Charges_Total)  
-- Valor mensal (account_Charges_Monthly)  
-- Tipo de contrato  
-- Método de pagamento  
-
-Os resultados indicam que clientes com contratos de curta duração e planos mensais possuem maior tendência ao cancelamento.
-
----
-
-## Conclusões e Insights
-
-A aplicação dos modelos permitiu identificar padrões relevantes no comportamento dos clientes:
-
-- A probabilidade de churn é maior nos primeiros meses de contrato  
-- Contratos mensais concentram maior volume de evasão  
-- Valores mensais elevados impactam a permanência do cliente  
-- O método de pagamento está diretamente relacionado ao risco de cancelamento  
-- O Random Forest demonstrou melhor desempenho preditivo  
-
----
-
-## Ferramentas Utilizadas
-
-- **Python** — linguagem base do projeto  
-- **Pandas** — manipulação e preparação dos dados  
-- **NumPy** — operações matemáticas  
-- **Matplotlib** — visualização gráfica  
-- **Seaborn** — análise estatística visual  
-- **Scikit-learn** — construção e avaliação dos modelos  
-- **Jupyter Notebook / Google Colab** — ambiente de desenvolvimento  
+```text
+Dados tratados — Parte 1
+        ↓
+Pré-processamento
+        ↓
+Codificação das variáveis
+        ↓
+Normalização / Padronização
+        ↓
+Análise de correlação
+        ↓
+Divisão treino e teste
+        ↓
+Treinamento dos modelos
+        ↓
+Avaliação das métricas
+        ↓
+Análise das variáveis
+        ↓
+Insights de negócio
+```
 
 ---
 
-## Recomendações Finais
+## ⚙️ Preparação dos Dados
 
-Com base nos resultados obtidos, recomenda-se:
+Antes da construção dos modelos, foram realizadas etapas de preparação para garantir que os dados estivessem adequados ao processo de Machine Learning.
 
-- Criar ações de retenção voltadas aos clientes nos primeiros meses de contrato  
-- Estimular planos de maior duração  
-- Acompanhar clientes classificados com alto risco de evasão  
-- Incentivar o uso de métodos de pagamento automáticos  
-- Integrar o modelo preditivo ao processo de tomada de decisão  
+Entre elas:
+
+* Correção de valores inconsistentes
+* Conversão de variáveis categóricas em numéricas
+* Codificação das variáveis
+* Normalização e padronização quando necessário
+* Análise de correlação entre atributos
+* Preparação das variáveis preditoras
+* Separação da variável alvo **Churn**
+
+Os dados foram posteriormente divididos em:
+
+**80% para treinamento**
+**20% para teste**
 
 ---
 
-## Projeto Relacionado
+## 🤖 Modelos de Machine Learning
 
-Parte 1 – Análise Exploratória e Tratamento de Dados  
-https://github.com/Lamarcks/TelecomX-1 
+Foram implementados e comparados dois algoritmos de classificação.
+
+### 📈 Regressão Logística
+
+Modelo utilizado por sua capacidade de classificação e facilidade de interpretação dos efeitos das variáveis sobre a probabilidade de Churn.
+
+### 🌲 Random Forest
+
+Modelo baseado em múltiplas árvores de decisão, capaz de identificar relações mais complexas entre as características dos clientes.
 
 ---
 
-## 👤 Autor
+## 📊 Avaliação dos Modelos
 
-Projeto desenvolvido por **Ihago Lamarcks**  
+Os modelos foram avaliados utilizando diferentes métricas de classificação:
 
+| Métrica                | Finalidade                                                  |
+| ---------------------- | ----------------------------------------------------------- |
+| **Acurácia**           | Percentual geral de previsões corretas                      |
+| **Precisão**           | Proporção de previsões positivas realmente corretas         |
+| **Recall**             | Capacidade de identificar clientes que realmente cancelaram |
+| **F1-Score**           | Equilíbrio entre Precisão e Recall                          |
+| **Matriz de Confusão** | Análise detalhada dos erros e acertos                       |
 
-LinkedIn: www.linkedin.com/in/ihago-lamarcks1
+A utilização de diferentes métricas permitiu avaliar os modelos além da acurácia geral.
+
+---
+
+## 🏆 Comparação dos Modelos
+
+A análise mostrou comportamentos diferentes entre os algoritmos.
+
+### 🌲 Random Forest
+
+Apresentou **melhor desempenho preditivo geral**, conseguindo identificar relações mais complexas existentes entre as variáveis.
+
+### 📈 Regressão Logística
+
+Apresentou maior facilidade de interpretação, permitindo compreender de forma mais transparente a influência das características dos clientes sobre o Churn.
+
+> A escolha de um modelo não depende apenas da acurácia, mas também do objetivo de negócio, da capacidade de identificação dos clientes em risco e da interpretabilidade necessária.
+
+---
+
+## 🔎 Principais Variáveis Relacionadas ao Churn
+
+A análise dos modelos destacou algumas características com maior relação com a evasão:
+
+* ⏳ **Tempo de permanência do cliente**
+* 💰 **Valor total gasto**
+* 💵 **Valor mensal**
+* 📄 **Tipo de contrato**
+* 💳 **Método de pagamento**
+
+Essas variáveis ajudam a compreender quais características devem receber maior atenção em estratégias de retenção.
+
+---
+
+## 💡 Principais Insights
+
+A modelagem reforçou padrões importantes observados durante a análise dos dados:
+
+### ⏳ Primeiros meses
+
+Clientes nos primeiros meses de relacionamento apresentam maior risco de cancelamento.
+
+### 📄 Contratos mensais
+
+Contratos de curta duração concentram maior ocorrência de Churn.
+
+### 💵 Mensalidades
+
+Valores mensais elevados apresentam relação com maior risco de evasão.
+
+### 💳 Forma de pagamento
+
+O método de pagamento também apresentou associação relevante com o comportamento de cancelamento.
+
+### 🤖 Machine Learning
+
+Os modelos permitem transformar esses padrões em previsões que podem auxiliar a empresa na identificação antecipada de clientes em risco.
+
+---
+
+## 🎯 Recomendações de Negócio
+
+Com base nos resultados, algumas estratégias podem ser consideradas:
+
+* Criar ações de retenção para clientes nos primeiros meses de contrato
+* Incentivar a migração para contratos de maior duração
+* Acompanhar clientes identificados como alto risco
+* Avaliar ofertas específicas para clientes com mensalidades elevadas
+* Incentivar métodos de pagamento automáticos
+* Integrar previsões de Churn aos processos de relacionamento com clientes
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+| Tecnologia                 | Aplicação                                              |
+| -------------------------- | ------------------------------------------------------ |
+| **Python**                 | Desenvolvimento da análise e modelagem                 |
+| **Pandas**                 | Manipulação e preparação dos dados                     |
+| **NumPy**                  | Operações numéricas                                    |
+| **Scikit-learn**           | Pré-processamento, treinamento e avaliação dos modelos |
+| **Matplotlib**             | Construção de visualizações                            |
+| **Seaborn**                | Visualizações estatísticas                             |
+| **Google Colab / Jupyter** | Desenvolvimento e execução do projeto                  |
+| **Git & GitHub**           | Versionamento e documentação                           |
+
+---
+
+## 📂 Estrutura do projeto
+
+```text
+TelecomX-2/
+│
+├── TelecomX_(2).ipynb
+└── README.md
+```
+
+### `TelecomX_(2).ipynb`
+
+Notebook contendo o processo completo de:
+
+**pré-processamento → modelagem → treinamento → avaliação → interpretação → recomendações.**
+
+---
+
+## 🚀 Como executar
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Lamarcks/TelecomX-2.git
+```
+
+### 2. Acesse a pasta
+
+```bash
+cd TelecomX-2
+```
+
+### 3. Abra o notebook
+
+```text
+TelecomX_(2).ipynb
+```
+
+O projeto pode ser executado utilizando:
+
+* **Google Colab**
+* **Jupyter Notebook**
+* **Visual Studio Code com suporte a Jupyter**
+
+---
+
+## 🔗 Projeto relacionado
+
+Este projeto é a continuação direta da análise realizada anteriormente:
+
+### 📊 Telecom X — Parte 1 | ETL e Análise Exploratória
+
+[➡️ Acessar Telecom X — Parte 1](https://github.com/Lamarcks/TelecomX-1)
+
+A evolução entre os projetos pode ser representada por:
+
+```text
+Telecom X — Parte 1
+ETL + EDA
+        ↓
+Telecom X — Parte 2
+Machine Learning
+        ↓
+Previsão de Churn
+        ↓
+Apoio à retenção de clientes
+```
+
+---
+
+## 📚 Conhecimentos desenvolvidos
+
+Durante o projeto foram aplicados conceitos importantes de Machine Learning:
+
+* Pré-processamento de dados
+* Feature Engineering
+* Codificação de variáveis
+* Normalização e padronização
+* Separação entre treino e teste
+* Modelos de classificação
+* Regressão Logística
+* Random Forest
+* Scikit-learn
+* Acurácia, Precisão, Recall e F1-Score
+* Matriz de Confusão
+* Análise de importância de variáveis
+* Interpretação de modelos
+* Geração de recomendações orientadas por dados
+
+---
+
+## ✅ Status do projeto
+
+**Concluído ✅**
+
+Projeto desenvolvido como parte da formação em **Data Science — Oracle Next Education (ONE) + Alura**.
+
+---
+
+## 👨‍💻 Autor
+
+**Ihago Lamarcks**
+
+Estudante de **Análise e Desenvolvimento de Sistemas**, com foco em **Python, Dados, Inteligência Artificial e Cloud Computing**.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ihago%20Lamarcks-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ihago-lamarcks1/)
+
+---
+
+<div align="center">
+
+### 🤖 Transformando dados em previsões para apoiar estratégias de retenção.
+
+**Python • Machine Learning • Scikit-learn • Data Science • Oracle Next Education**
+
+</div>
